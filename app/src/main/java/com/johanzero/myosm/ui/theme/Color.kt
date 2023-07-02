@@ -1,4 +1,4 @@
-package com.johanzero.openstreetmap.ui.theme
+package com.johanzero.myosm.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

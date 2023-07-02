@@ -1,4 +1,4 @@
-package com.johanzero.openstreetmap
+package com.johanzero.myosm
 
 import org.junit.Test
 

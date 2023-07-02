@@ -1,4 +1,4 @@
-package com.johanzero.openstreetmap
+package com.johanzero.myosm
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -9,8 +9,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.johanzero.openstreetmap.ui.MapViewModel
-import com.johanzero.openstreetmap.ui.theme.OpenStreetMapTheme
+import com.johanzero.myosm.ui.MapViewModel
+import com.johanzero.myosm.ui.theme.OpenStreetMapTheme
 import ovh.plrapps.mapcompose.ui.MapUI
 
 class MainActivity : ComponentActivity() {

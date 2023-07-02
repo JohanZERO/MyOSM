@@ -1,4 +1,4 @@
-package com.johanzero.openstreetmap.ui
+package com.johanzero.myosm.ui
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
