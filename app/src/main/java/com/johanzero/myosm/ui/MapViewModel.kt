@@ -4,8 +4,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 import ovh.plrapps.mapcompose.api.addLayer
 import ovh.plrapps.mapcompose.api.scale
 import ovh.plrapps.mapcompose.api.shouldLoopScale
@@ -37,13 +35,9 @@ private fun makeTileStreamProvider() =
     TileStreamProvider { row, col, zoomLvl ->
         try {
             val url = URL("https://raw.githubusercontent.com/p-lr/MapCompose/master/demo/src/main/assets/tiles/mont_blanc/$zoomLvl/$row/$col.jpg")
-            val connection = withContext(Dispatchers.IO) {
-                url.openConnection()
-            } as HttpURLConnection
+            val connection = url.openConnection() as HttpURLConnection
             connection.doInput = true
-            withContext(Dispatchers.IO) {
-                connection.connect()
-            }
+            connection.connect()
             BufferedInputStream(connection.inputStream)
         } catch (e: Exception) {
             e.printStackTrace()
